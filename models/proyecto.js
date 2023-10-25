@@ -1,15 +1,16 @@
 const Sequelize = require('sequelize');
 
-const Persona = (sequelize)=>{
-    sequelize.define('persona',{
+const Proyecto = (sequelize)=>{
+    sequelize.define('proyecto',{
         idPersona:{
             type:Sequelize.INTEGER,
             autoIncrement: true,
             primaryKey:true,
             allowNull: false
         },
-        nombre:Sequelize.STRING(50)
+        nombre:Sequelize.STRING(30),
+        descripcion:Sequelize.STRING
 
     })
 };
-module.exports = Persona; //Como es un archivo aislado, con este comando podemos sacar a Persona
+module.exports = Proyecto;
